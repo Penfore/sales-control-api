@@ -8,7 +8,6 @@ The goal of this project is to develop an API for regional and national sales co
 
 - Laravel 10: PHP framework for API development.
 - MySQL: Database for information storage.
-- Docker: Development and production environment.
 
 ## How to test
 
@@ -30,7 +29,7 @@ The goal of this project is to develop an API for regional and national sales co
   - `gd`
   - `zip`
   - `pdo_mysql`
-- Run `php check.php` again and all should be fine.
+- Run `php check.php` again and all should be fine except for a Postgres warning. Ignore it.
 
 ### Steps to tun
 - Clone the repository and enter the folder with your terminal
