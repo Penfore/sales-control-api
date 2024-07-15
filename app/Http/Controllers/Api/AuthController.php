@@ -12,6 +12,11 @@ use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
+  public function __constructor()
+  {
+    $this->authorizeResource(User::class, 'user');
+  }
+
   public function register(Request $request): JsonResponse
   {
     $data = $request->validate([
@@ -52,8 +57,7 @@ class AuthController extends Controller
     return response()->json([
       'user' => new UserResource($user),
       'token' => $token,
-      'Type' => 'Bearer',
-      'role' => $user->role
+      'Type' => 'Bearer'
     ]);
   }
 

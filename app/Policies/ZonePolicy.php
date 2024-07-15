@@ -23,16 +23,16 @@ class ZonePolicy
 
   public function create(User $user): bool
   {
-    return in_array($user->role, [UserRole::DIRETOR->value, UserRole::DIRETOR_GERAL->value]);
+    return in_array($user->role, [UserRole::DIRETOR_GERAL->value]);
   }
 
   public function update(User $user, Zone $zone): bool
   {
-    return in_array($user->role, [UserRole::DIRETOR->value, UserRole::DIRETOR_GERAL->value]);
+    return in_array($user->role, [UserRole::DIRETOR_GERAL->value]);
   }
 
   public function delete(User $user, Zone $zone): bool
   {
-    return in_array($user->role, [UserRole::DIRETOR->value, UserRole::DIRETOR_GERAL->value]);
+    return in_array($user->role, [UserRole::DIRETOR_GERAL->value]);
   }
 }

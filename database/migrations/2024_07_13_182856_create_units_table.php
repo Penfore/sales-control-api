@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreign('manager_id')->references('id')->on('users');
             $table->unsignedBigInteger('zone_id');
             $table->foreign('zone_id')->references('id')->on('zones');
-            $table->unsignedBigInteger('seller_id');
+            $table->unsignedBigInteger('seller_id')->nullable();
             $table->foreign('seller_id')->references('id')->on('users');
 
             $table->timestamps();

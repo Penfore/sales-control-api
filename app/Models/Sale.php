@@ -19,6 +19,7 @@ class Sale extends Model
     'sale_date',
     'latitude',
     'longitude',
+    'is_roaming',
   ];
 
   public function seller(): BelongsTo

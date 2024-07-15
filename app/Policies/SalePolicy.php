@@ -11,23 +11,13 @@ class SalePolicy
 {
   use HandlesAuthorization;
 
-  public function viewAny(User $user, Sale $sale): bool
+  public function viewAny(User $user): bool
   {
-    if ($user->role == UserRole::VENDEDOR->value) {
-      return $sale->seller_id === $user->id;
-    } elseif ($user->role == UserRole::GERENTE->value) {
-      return $sale->unit_id === $user->unit_id;
-    }
     return true;
   }
 
-  public function view(User $user, Sale $sale): bool
+  public function view(User $user): bool
   {
-    if ($user->role == UserRole::VENDEDOR->value) {
-      return $sale->seller_id === $user->id;
-    } elseif ($user->role == UserRole::GERENTE->value) {
-      return $sale->unit_id === $user->unit_id;
-    }
     return true;
   }
 
@@ -38,7 +28,7 @@ class SalePolicy
 
   public function update(User $user, Sale $sale): bool
   {
-    return $user->role == UserRole::VENDEDOR->value;
+    return $user->role == UserRole::VENDEDOR->value && $user->id === $sale->seller_id;
   }
 
   public function delete(User $user, Sale $sale): bool

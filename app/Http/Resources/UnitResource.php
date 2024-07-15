@@ -22,6 +22,7 @@ class UnitResource extends JsonResource
       'manager' => new UserResource($this->whenLoaded('manager')),
       'sellers' => UserResource::collection($this->whenLoaded('sellers')),
       'zone_id' => $this->zone_id,
+      'manager_id' => $this->manager_id,
     ];
   }
 }

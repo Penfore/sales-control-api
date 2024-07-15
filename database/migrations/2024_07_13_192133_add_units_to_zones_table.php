@@ -11,7 +11,7 @@ return new class extends Migration {
   public function up(): void
   {
     Schema::table('zones', function (Blueprint $table) {
-      $table->unsignedBigInteger('unit_id');
+      $table->unsignedBigInteger('unit_id')->nullable();
       $table->foreign('unit_id')->references('id')->on('units');
     });
   }
