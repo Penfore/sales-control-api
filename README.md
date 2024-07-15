@@ -14,10 +14,14 @@ The goal of this project is to develop an API for regional and national sales co
 
 ### Requirements
 #### Easy start with XAMPP:
-- [XAMPP](https://www.apachefriends.org/pt_br/index.html) - This will install PHP and MySQL. It will also offer other options, but stick to these two
+- [XAMPP](https://www.apachefriends.org/pt_br/index.html) - This will install PHP and MySQL. It will also offer other options, but stick to these two.
+- Add PHP to your PATH
+- [Composer](https://getcomposer.org/download/)
 #### Install all yourself
 - [PHP 8.1](https://www.php.net/downloads)
 - [MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/)
+- Add PHP to your PATH
+- [Composer](https://getcomposer.org/download/)
 #### Configure required extensions
 - Download [this file](https://gist.github.com/Penfore/07209736991285c8b565922aef95b0ff)
 - Open your terminal where the file is located
@@ -31,6 +35,8 @@ The goal of this project is to develop an API for regional and national sales co
 ### Steps to tun
 - Clone the repository and enter the folder with your terminal
 - Start MySQL's service (with XAMPP you can just click `start` in the GUI)
+- Download the [.env file](https://drive.proton.me/urls/RZNWDCCX88#XDCwWqoq6IEc) with the database configured for testing (If you already have a database setup you might need to adapt with your settings) and put it inside the project folder
+- Run `composer install` to install all dependencies
 - Run `php artisan migrate`
 - Run `php artisan db:seed`
 - Start the serve with `php artisan serve`
